@@ -6,8 +6,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: bundle install
+          name: bundler install
           command: gem install bundler:2.3.3
+      - run:
+          name: bundle install
+          command: bundle install
       - run:
           name: hello
           command: bundle exec rspec hello_spec.rb
